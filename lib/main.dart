@@ -8,17 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final randomWord = WordPair.random();
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter Appbar'),
-        ),
-        body: Center(
-          child: RandomWords(),
-        ),
-      ),
-    );
+    return MaterialApp(title: 'Welcome to Flutter', home: RandomWords());
   }
 }
 
@@ -40,7 +30,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('This is title'),
+        title: Text('Random Words Generator'),
       ),
       body: _buildSuggestionList(),
     );
