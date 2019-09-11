@@ -8,7 +8,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final randomWord = WordPair.random();
-    return MaterialApp(title: 'Welcome to Flutter', home: RandomWords());
+    return MaterialApp(
+        title: 'Welcome to Flutter',
+        theme: ThemeData(
+          primaryColor: Colors.white,
+        ),
+        home: RandomWords());
   }
 }
 
